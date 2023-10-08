@@ -162,3 +162,4 @@ cython_debug/
 
 ./squad_dataset
 squad_dataset
+data
