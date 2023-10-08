@@ -1,7 +1,8 @@
 from sklearn.metrics import f1_score, accuracy_score
 from sklearn.model_selection import cross_val_score
 
-def compute_evaluation_metrics(y_true, y_predicted): # Returns F1 and Exact Match Metrics
+def compute_evaluation_metrics(y_true, y_predicted):
+    # Returns F1 and Exact Match Metrics
     return f1_score(y_true, y_predicted, average="micro"), accuracy_score(
         y_true, y_predicted
     )
