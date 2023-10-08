@@ -10,4 +10,5 @@ def compute_evaluation_metrics(y_true, y_predicted):
 def cross_validation(model, x, y, k):
     scores = cross_val_score(model, x, y, cv=k)
     print(f"{scores.mean()} accuracy with a standard deviation of {scores.std()}")
+
     return scores
