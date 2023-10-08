@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from datasets import load_dataset
 
@@ -8,6 +9,11 @@ dataset = load_dataset("squad")
 validation = pd.DataFrame(dataset["validation"])
 train = pd.DataFrame(dataset["train"])
 # Specify the path to save the CSV file
+try:  
+    os.mkdir('./data')  
+except OSError as error: 
+    print('Data directory already exists - Skipping this step')
+
 VALIDATION_CSV_FILE_PATH = "data/squad_validation.csv"
 TRAIN_CSV_FILE_PATH = "data/squad_train.csv"
 
