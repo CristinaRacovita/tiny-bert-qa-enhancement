@@ -2,7 +2,8 @@ from datasets import load_dataset
 
 
 class DataLoader:
-    DIRECTORY = "../data/"
+    def __init__(self, directory="../data/"):
+        self.directory = directory
 
     def store_data(self):
         # download and chache data
@@ -11,14 +12,14 @@ class DataLoader:
 
         # store a json for train and validation data
         for split, dataset in squad_data.items():
-            dataset.to_json(f"{self.DIRECTORY}squad_data_{split}.json")
-        print("fThe dataset is stored at {self.DIRECTORY}")
+            dataset.to_json(f"{self.directory}squad_data_{split}.json")
+        print(f"The dataset is stored at {self.directory}")
 
     def load_data(self):
         # load the train and validation datasets
         data_files = {
-            "train": "{self.DIRECTORY}squad_data_train.json",
-            "validation": "{self.DIRECTORY}squad_data_validation.json",
+            "train": f"{self.directory}squad_data_train.json",
+            "validation": f"{self.directory}squad_data_validation.json",
         }
 
         data = load_dataset("json", data_files=data_files)
