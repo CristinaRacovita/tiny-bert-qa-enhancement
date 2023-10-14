@@ -20,11 +20,11 @@ def store_taggings():
         obj["POS_question"] = pos_method.get_pos(obj["question"])
         obj["POS_context"] = pos_method.get_pos(obj["context"])
 
-        obj["NER_question"] = ner_method.get_ner_over_percent(obj["question"], 0.0)
-        obj["NER_context"] = ner_method.get_ner_over_percent(obj["context"], 0.0)
+        obj["NER_question"] = ner_method.get_ner_over_percent(obj["question"], 0.1)
+        obj["NER_context"] = ner_method.get_ner_over_percent(obj["context"], 0.1)
 
     # Open a new JSON file for writing
-    output_file_path = "data/output.json"
+    output_file_path = "data/squad_data_train_pos_ner.json"
     with open(output_file_path, "w") as output_file:
         for data_line in data:
             output_file.write(json.dumps(data_line) + "\n")
