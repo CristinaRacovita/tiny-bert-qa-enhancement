@@ -7,18 +7,10 @@ class TaggingMethod:
     def __init__(self, method_type) -> None:
         self.tagger = SequenceTagger.load(method_type)
 
-    # @property
-    # def tagger(self) -> SequenceTagger:
-    #     return self.tagger
-    
-    # @tagger.setter
-    # def tagger(self, tagger):
-    #     self.tagger = tagger
-
 
 class NERTaggingMethod(TaggingMethod):
     def __init__(self) -> None:
-        TaggingMethod.__init__(self, method_type="ner")
+        TaggingMethod.__init__(self, method_type="ner-fast")
 
     def get_ner_over_percent(self, sentence_text, percent):
         # Create a Flair Sentence object
