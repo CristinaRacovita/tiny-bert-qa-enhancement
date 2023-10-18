@@ -7,8 +7,8 @@
     - stride=128
 
 - post-processing
-    - n_best=20
-    - max_answer_length=30
+    - n_best=32
+    - max_answer_length=128
 
 - hyperparameters
     - batch_size=8
@@ -16,7 +16,7 @@
     - num_train_epochs=3
 
 - results
-    - training time: 4h 16min
-    - epoch 0: {'exact_match': 26.3197729422895, 'f1': 38.04366149964173}
-    - epoch 1: {'exact_match': 29.858088930936614, 'f1': 41.80600115478611}
-    - epoch 2: {'exact_match': 31.09744560075686, 'f1': 43.15172932323862}
+    - training time: 9min 50s
+    - epoch 0: {'exact_match': 25.21286660359508, 'f1': 36.957914483680405}
+    - epoch 1: {'exact_match': 29.829706717123937, 'f1': 41.99564183612771}
+    - epoch 2: {'exact_match': 32.03405865657521, 'f1': 44.172691480744795}
