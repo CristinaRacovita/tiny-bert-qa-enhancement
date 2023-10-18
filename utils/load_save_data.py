@@ -2,7 +2,7 @@ from datasets import load_dataset
 
 
 class DataLoader:
-    def __init__(self, directory="../data/"):
+    def __init__(self, directory="./data/"):
         self.directory = directory
 
     def store_data(self):
