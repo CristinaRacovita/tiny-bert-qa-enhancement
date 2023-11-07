@@ -1,0 +1,38 @@
+REMOVING SPECIAL TOKENS:
+pos after, removing special tokens
+[{'exact_match': 38.99716177861873, 'f1': 52.07081458014157}]
+
+pos after, leaving special tokens
+[{'exact_match': 35.08041627246925, 'f1': 55.70430055389724}]
+
+POS BETWEEN parameters:
+- for validation data, 358 lines have fewer answers and only 1 line has an incorrect answer
+- for train data, 21 lines have incorrect answers
+- max_answer_length=482 - based on longest answer from train data
+- when stride = 128 => perf between 50.84 and 50.016 for F1
+- when stride = 256 => perf between 49.72 and 52.61 for F1 
+- stride 256 because the training answers have for each token a special token with the POS
+
+NER span multi (up to 4 tags per span) 4 parameters:
+- for validation data, 102 lines have fewer answers, 15 questions w/o any response
+- for train data, 413 lines have empty answers 
+- max_answer_length=538 - based on longest answer from train data
+- stride 256 because the training answers have many NE tokens
+
+NER span multi (up to 4 tags per span) 18 parameters:
+- for validation data, 106 lines have fewer answers, 17 questions w/o any response
+- for train data, 427 lines have empty answers 
+- max_answer_length=442 - based on longest answer from train data
+- stride 256 because the training answers have many NE tokens
+ 
+NER span single 4 parameters:
+- for validation data, 102 lines have fewer answers, 15 questions w/o any response
+- for train data, 412 lines have empty answers 
+- max_answer_length=326 - based on longest answer from train data
+- stride 256 because the training answers have many NE tokens
+
+NER span single 18 parameters:
+- for validation data, 105 lines have fewer answers, 16 questions w/o any response
+- for train data, 425 lines have empty answers 
+- max_answer_length=401 - based on longest answer from train data
+- stride 256 because the training answers have many NE tokens
