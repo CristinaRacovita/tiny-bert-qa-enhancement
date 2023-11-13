@@ -1,0 +1,13 @@
+{
+  "additional_special_tokens": [
+    "[LOC]",
+    "[MISC]",
+    "[ORG]",
+    "[PER]"
+  ],
+  "cls_token": "[CLS]",
+  "mask_token": "[MASK]",
+  "pad_token": "[PAD]",
+  "sep_token": "[SEP]",
+  "unk_token": "[UNK]"
+}
